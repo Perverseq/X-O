@@ -27,11 +27,11 @@ def choose_symbol():
 
 def move(game_field, player, comp, moves_list):
     print("Выберите, куда сходить")
-    choosen_cell = int(input())
+    chosen_cell = int(input())
     try:
-        if choosen_cell in moves_list:
-            game_field[choosen_cell - 1] = player
-            moves_list.remove(choosen_cell)
+        if chosen_cell in moves_list:
+            game_field[chosen_cell - 1] = player
+            moves_list.remove(chosen_cell)
             if moves_list:
                 comp_move = random.choice(moves_list)
                 print(f"Компьютер выбрал клетку {comp_move}")
